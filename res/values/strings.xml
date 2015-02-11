@@ -1,0 +1,252 @@
+<resources>
+
+    <string name="app_name">MyDialogDemo</string>
+    
+        <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="hint">提示</string>
+    <string name="exit">退出</string>
+    <string name="exit_sure">确定退出？</string>
+    <string name="unknown">未知</string>
+    <string name="not_net">网络异常，请检查网络连接！</string>
+     <string name="not_questions">本组没有题目</string>  
+     <string name="not_questions_fail">获取题目失败</string>  
+     <string name="not_questions1">本组没有题目-练习</string>  
+     <string name="not_questions2">本组没有题目-测试</string>  
+     <string name="not_err_questions">恭喜，没有答错题目</string>  
+    <string name="txt_search">搜索</string>  
+    
+    <string name="txt_hour">小时</string>
+    <string name="txt_minitue">分钟</string>
+    <string name="txt_second">秒</string>
+    
+    <string name="txt_school_term">学期</string>
+    <string name="txt_subject">学科</string>
+    
+    <string name="hint_dialog_commit1">目前还有（</string>
+    <string name="hint_dialog_commit2">）题未答，</string>
+    <string name="hint_dialog_commit3">确认提交吗？</string>
+    <string name="exit_sure_exam">确定退出考试？</string>
+    
+    <string name="hint_not_find_classromm">没有安装教室控制</string>
+<string name="hint_not_logined">教室控制程序尚未登录，请先登录</string>
+<string name="hint_not_logined2">获取版本信息失败，请确定教室控制程序已登录</string>
+
+   <string name="txt_not_get_type">获取题型列表失败</string>
+   <string name="txt_not_get_charper">获取章节列表失败</string>
+   <string name="txt_not_type">题型列表为空</string>
+   <string name="txt_not_charper">章节列表为空</string>
+
+    <string name="txt_exam_type">类型:</string>
+    <string name="txt_exam_order">排序:</string>
+    <string name="txt_lasted">最新</string>
+    <string name="txt_hot">热门</string>
+    <string name="txt_all">全部</string>
+    
+    <string name="hint_dialog_waiting">正在查询，请稍候！</string>
+    <string name="hint_dialog_commit_cancle">正在取消答题</string><!-- 提交对话框 -->
+    <string name="hint_dialog_commit_waiting">正在提交答案</string><!-- 提交对话框 -->
+    <string name="hint_dialog_commit_success">提交成功</string><!-- 提交成功对话框 -->
+<!--     <string name="hint_dialog_commit_failure">提交试题失败,请重试</string> -->
+    <string name="hint_line_timeout">暂无该类题目！</string>
+    <string name="hint_not_favorites">暂无收藏题目！</string>
+    
+    <string name="txt_head_title_practice">练习测试</string>
+    <string name="txt_head_title_exam_subjects">%1$s</string>
+    <string name="txt_head_title_exam_grade">年级</string>
+    <string name="txt_head_title_exam_subjects1">科目</string>
+    <string name="txt_head_title_exam_unit">-%1$s</string>
+    <string name="txt_head_title_exam_unit1">-学期</string>
+    <string name="btn_practice">练习</string>
+    <string name="btn_exam">测试</string>
+    <string name="btn_my_favorites">我的\n收藏</string>
+    
+    <string name="txt_item_subject">%1$s</string>
+    <string name="txt_item_subject1">%1$s(%2$s)</string>
+    <string name="txt_item_spinner_type">题型</string>
+    <string name="txt_item_spinner_chapter">课本章节</string>
+    
+    <string name="txt_practice_times0">共练习</string>
+    <string name="txt_practice_times1">%1$d</string>
+    <string name="txt_practice_times11">0</string>
+    <string name="txt_practice_times2">次，正确率</string>
+    <string name="txt_practice_times3">%1$s%%</string>
+    <string name="txt_practice_times31">0.0%</string>
+    <string name="item_practice_times_chapters">共练习%1$d次，答题%2$d道</string>
+    <string name="item_practice_times">练习%1$d次，答题%2$d道</string>
+    
+    <string name="txt_practice_history">练习历史</string>
+    <string name="txt_practice_history_times">%1$s,    共%2$s道,</string>
+    <string name="txt_practice_history_rightCount">答完%1$s道</string>
+    <string name="txt_practice_history_not_finish">未完成,</string>
+    <string name="txt_practice_history_continue">继续>>></string>
+    
+    <string name="btn_exam_homework">家庭\n作业</string>
+    <string name="btn_exam_knowledge_focus">知识\n重点</string>
+    <string name="btn_exam_score">考试\n成绩</string>
+    <string name="btn_exam_news">消息\n通知</string>
+    <string name="txt_exam_times_score0">共测试</string>
+    <string name="txt_exam_times_score1">%1$d</string>
+    <string name="txt_exam_times_score11">0</string>
+    <string name="txt_exam_times_score2">次，最高得分</string>
+    <string name="txt_exam_times_score3">%1$s分</string>
+    <string name="txt_exam_times_score31">0分</string>
+    <string name="tbr_exam_type">类型：</string>
+    <string name="tbr_exam_order">排序：</string>
+    <string name="tbr_exam_all">全部</string>
+    
+    <string name="txt_exam_history">测试历史</string>
+    <string name="txt_exam_history_times">%1$s,    客观题总分：%2$s分，测试得分：%3$s分，  测试用时：%4$s</string>
+    <string name="txt_exam_history_times1">%1$s,    客观题总分：%2$s分，  测试用时：%4$s，未完成，</string>
+    <string name="txt_exam_history_times2">继续>>></string>
+    
+    <string name="txt_exam_preview_total">试题总分：%1$s</string>
+    <string name="txt_exam_preview_vision">版本：%1$s</string>
+    <string name="txt_exam_preview_subjects">科目：%1$s</string>
+    <string name="txt_exam_preview_type">类型：%1$s</string>
+    <string name="txt_exam_preview_year">年份：%1$s</string>
+    <string name="txt_exam_preview_area">地区：%1$s</string>
+    <string name="txt_exam_preview_school">学校：%1$s</string>
+    <string name="txt_exam_preview_info">说明：%1$s</string>
+    <string name="txt_exam_preview_info_no">(暂无说明)</string>
+    <string name="btn_exam_preview_collapse">收起</string>
+    <string name="btn_exam_preview_expand">展开</string>
+    <string name="btn_exam_preview_startexam">开始答题</string>
+    
+    <string name="btn_exam_preview">预览</string>
+    <string name="btn_exam_startexam">开始答卷</string>
+    
+    <string name="btn_exam_head_scrap">草稿</string>
+    <string name="txt_exam_title_type_index">%1$s(%2$d/%3$d)</string>
+    <string name="txt_exam_submit">交卷并查看结果</string>
+    <string name="txt_exam_answer_hint">作答：</string>
+    
+    <string name="txt_myfavorites_head_question">题目</string>
+    <string name="txt_myfavorites_head_subject">科目</string>
+    <string name="txt_myfavorites_head_date">日期</string>
+    <string name="txt_myfavorites_head_type">题型</string>
+    <string name="txt_myfavorites_head_where">来源</string>
+    <string name="txt_myfavorites_head_operation">操作</string>
+    
+    <string name="txt_quest_select_single">单选题</string>
+    <string name="txt_quest_select_multi">多选题</string>
+    <string name="txt_quest_fillblank">填空题</string>
+    <string name="txt_quest_judge">判断题</string>
+    <string name="txt_quest_ask">问答题</string>
+    
+    <string name="tit_edit_filblank0"  formatted="true">输入第%1$d个小题第%2$d个空的答案</string>
+    <string name="tit_edit_filblank">输入第%d个空的答案</string>
+    <string name="tit_edit_filblank_other">点击输入答案</string>
+    <string name="tit_frist_question">已是第一题</string>
+    <string name="tit_last_question">已是最后一题</string>
+    
+    <string name="tit_submit_dialog">提交</string>
+    <string name="hint_submit_sure">确认提交？</string>
+    <string name="hint_submit_exit">确认退出答题？</string>
+    <string name="hint_submit_not_finish">你还有以下题目没有作答：</string>
+    <string name="hint_submit_sucess">提交成功！</string>
+    <string name="hint_submit_sucess_local">取消答题，本地提交成功！</string>
+    <string name="hint_submit_failure">提交失败，请重新提交！</string>
+    <string name="txt_answer_paper">答题卡</string>
+    <string name="hint_submit_not_answer_count1">目前还有（</string>
+    <string name="hint_submit_not_answer_count2">）道题未作答，确认提交吗？</string>
+    
+    <string name="tit_report">测试报告</string>
+    <string name="btn_continue">继续练习</string>
+    <string name="txt_practice_name">练习名称：%1$s</string>
+    <string name="txt_practice_date">练习时间：%1$s</string>
+    <string name="txt_practice_type">题型练习-%1$s</string>
+    <string name="txt_practice_chapter">章节练习-%1$s</string>
+    <string name="txt_practice_exam">测试练习-%1$s</string>
+    <string name="txt_answer_right">答对</string>
+    <string name="txt_answer_right_rate">道/%1$d道</string>
+    <string name="txt_answer_totle_count">共作答：%1$d道</string>
+    <string name="txt_answer_right_pre">正确率：%1$s%%</string>
+    <string name="txt_answer_time_uesed">用时：%s</string>
+    
+    <string name="txt_exam_paper_title">试卷名称：%s</string>
+    <string name="txt_exam_paper_commit_date">提交时间：%s</string>
+    <string name="txt_exam_paper_uesd_time">测试用时：%s</string>
+    <string name="txt_exam_paper_objective_totle_score">客观题总分：%s 分</string>
+    <string name="txt_exam_paper_objective_your_score">客观题得分：%s 分</string>
+    <string name="txt_exam_paper_subjective_totle_score">主观题总分：%s 分，本系统只提供题目参考答案，不予以判断对错。</string>
+    
+    <string name="txt_prasing_wrong">错题解析</string>
+    <string name="txt_prasing_all">解析全部</string>
+    <string name="txt_prasing_getting_prasing">（正在解析...）</string>
+    <string name="txt_prasing_no_prasing">（暂无解析）</string>
+    <string name="txt_prasing_getting_statistics">（正在获取统计数据...）</string>
+    <string name="txt_prasing_no_statistics">（本题暂无统计数据）</string>
+    <string name="txt_prasing_statistics0">本题共被作答%1$d次</string>
+    <string name="txt_prasing_statistics1">正确率%1$s%%</string>
+    <string name="txt_prasing_statistics2">易错项%1$s</string>
+    
+    <string name="hint_prasing_drafts_save_success">保存草稿成功</string>
+    <string name="hint_prasing_drafts_save_failure">保存草稿失败</string>
+    <string name="btn_prasing_drafts">查看草稿</string>
+    <string name="btn_prasing_photo">查看图片</string>
+    <string name="hint_prasing_photo_save_success">保存图片成功</string>
+    <string name="hint_prasing_photo_save_failure">保存图片失败</string>
+    <string name="txt_prasing_answer">正确答案：</string>
+    <string name="txt_prasing_your_answer1">你的答案：</string>
+    <string name="txt_prasing_your_answer">%1$s</string>
+    <string name="txt_prasing">解析</string>
+    <string name="txt_statistics">统计</string>
+    
+        <string name="saveto_camera">已储存到</string>
+    <string name="delete_temp_camera">缓存已删除</string>
+    
+    <string name="tint_no_sdcard">SD卡不存在</string>
+    <string name="tint_noflash_camera">您的设备不支持闪关灯</string>
+    <string name="txt_size_camera">×</string>
+    
+    <string name="Client_Protocol_Exception">客户端协议异常</string>
+    <string name="JSON_Exception">Json解析异常</string>
+    <string name="IO_Exception">访问网络失败</string>
+    <string name="get_basedata_failure">获取基础数据失败</string>
+    
+    <string name="txt_btn_my_favorites_subject">科目</string>
+    <string name="txt_btn_my_favorites_date">日期</string>
+    <string name="txt_btn_my_favorites_type">题型</string>
+    <string name="txt_btn_my_favorites_conefrom">来源</string>
+    
+    <string name="dialog_title_selecte_date">选择日期</string>
+    <string name="fmt_date">%1$d年%2$d月%3$d日</string>
+    
+    <string name="hint_practice_no_question">没有更多练习历史了</string>
+    <string name="hint_exam_no_question">没有更多测试历史了</string>
+    <string name="hint_question_no_question">没有更多题目了</string>
+    <string name="hint_favorites_no_question">没有更多收藏了</string>
+    <string name="hint_favorites_success">收藏成功</string>
+    <string name="hint_favorites_already_in_DB">本地已经收藏过了</string>
+    <string name="hint_favorites_not_in_DB">本地未收藏，不需要取消收藏</string>
+    <string name="hint_favorites_already_delete">本条收藏已被删除</string>
+    <string name="hint_favorites_failure">收藏失败</string>
+    <string name="hint_cancle_favorites_success">操作成功</string>
+    <string name="hint_cancle_favorites_failure">查询云端收藏失败</string>
+    <string name="hint_cancle_favorites_failure_net">网络错误，操作失败</string>
+    
+    <string name="tit_dialog_my_favorites_delete">取消收藏</string>
+    <string name="tit_dialog_my_favorites_delete_sure">确定取消收藏</string>
+    <string name="tit_dialog_history_delete">删除历史</string>
+    <string name="tit_dialog_history_delete_sure">确定要删除本条历史</string>
+    <string name="hint_delete_success">删除成功</string>
+    <string name="hint_delete_failure">删除失败</string>
+    <string name="hint_not_net_get_localHistory_success">无网络，获取本地历史成功</string>
+    <string name="hint_not_net_get_localHistory_failure">无网络，本地无练习历史</string>
+    
+    <string name="btn_search">查找</string>
+    <string name="btn_search_keyword">请输入检索关键字</string>
+    <string name="txt_get_more">点击获取更多</string>
+    
+    <string name="hint_add_err_quest_success">错题入库成功</string>
+    <string name="hint_err_quest_NameNotFoundException">错题本未找到</string>
+    <string name="hint_err_quest_SQLiteException">错题本数据库操作异常</string>
+    
+    <string name="hint_get_last_vesion_fail"> 获取更新消息失败</string>
+    <string name="hint_got_last_vesion"> 有新版本可更新，是否更新？</string>
+    <string name="hint_is_last_vesion"> 暂无更新</string>
+    <string name="hint_not_find_update"> 未安装自动更新程序</string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_commit"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/view_dialog_commit_closed"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_cloese" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" 
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lyt_dialog_commit_not_answer_index"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lyt_dialog_commit_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认提交？"
+                android:textColor="#ff000000"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_dialog_commit_not_answer_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目前还有（"
+                android:textColor="#ff000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_submit_not_answer_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#ffff0000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="）题未做答，"
+                android:textColor="#ff000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_submit_not_answer_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否提交？"
+                android:textColor="#ff000000"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txt_dialog_commit_cancle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tit_prasing_title_backgroud"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/frontsize_large" />
+
+        <TextView
+            android:id="@+id/txt_dialog_commit_ok"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/head_backcolor"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/frontsize_large" />
+    </LinearLayout>
+
+</LinearLayout>
