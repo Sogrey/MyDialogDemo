@@ -3,14 +3,12 @@ package org.sogrey.mydialog;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract.Constants;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -69,9 +67,9 @@ public class MainActivity extends Activity {
 				.findViewById(R.id.txt_submit_not_answer_count);
 		TextView txtCommitNotAnswerSure = (TextView) view
 				.findViewById(R.id.txt_submit_not_answer_sure);
-		TextView txtCommitCancle = (TextView) view
+		final TextView txtCommitCancle = (TextView) view
 				.findViewById(R.id.txt_dialog_commit_cancle);
-		TextView txtCommitOk = (TextView) view
+		final TextView txtCommitOk = (TextView) view
 				.findViewById(R.id.txt_dialog_commit_ok);
 		
 		btnClosed.setOnClickListener(new OnClickListener() {// 关闭按钮点击
@@ -90,14 +88,19 @@ public class MainActivity extends Activity {
 					indexItem = new ArrayList<Integer>();
 				}
 					indexItem.add(index);
-					if (5==indexItem.size()||indexItem.size()==notFinishIndex.size()) {
+					if (5==indexItem.size()||indexItem.size()==notFinishIndex.size()||index==notFinishIndex.get(notFinishIndex.size()-1)) {
 						indexs.add(indexItem);
 					}
 			}
+			lytQuesIndex.setOrientation(LinearLayout.VERTICAL);
 			lytQuesIndex.setGravity(Gravity.CENTER);
 			LinearLayout lytQuesIndexItem;
 			for (ArrayList<Integer> index1 : indexs) {
 				lytQuesIndexItem = new LinearLayout(this);
+				LinearLayout.LayoutParams lpItem = new LinearLayout.LayoutParams(
+						LayoutParams.MATCH_PARENT,
+						0, 1);
+				lytQuesIndexItem.setLayoutParams(lpItem);
 				lytQuesIndexItem.setOrientation(LinearLayout.HORIZONTAL);
 				lytQuesIndexItem.setGravity(Gravity.CENTER);
 				for (Integer index2 : index1) {
@@ -116,23 +119,13 @@ public class MainActivity extends Activity {
 
 						@Override
 						public void onClick(View v) {
-							// AnswerExamPaperService.service.mQusetIndex = index;
-							// AnswerExamPaperService.service.mQusetIndexBeforeChange
-							// =index;
-							// Intent intent = new Intent(this,
-							// class);// 跳回到自身，只改变题目
-							// this.startActivity(intent);
-							// this.finish();
 							Toast.makeText(MainActivity.this, btn.getText().toString(), Toast.LENGTH_SHORT).show();
 						}
 					});
 					lytQuesIndexItem.addView(btn);
 				}
-//				if (5==lytQuesIndexItem.getChildCount()) {
 					lytQuesIndex.addView(lytQuesIndexItem);
-//				}
 			}
-//			for (final Integer index : notFinishIndex) {}
 		}
 		
 		txtCommitNotAnswerCount.setText(notFinishIndex.size() + "");
@@ -148,51 +141,33 @@ public class MainActivity extends Activity {
 		if (isBack) {// 退出答题
 			txtCommitNotAnswerSure
 					.setText(getString(R.string.hint_submit_exit));
-			// okButton = getString(R.string.exit);
 			txtCommitOk.setText(R.string.exit);
 		} else {// 提交答题
 			txtCommitNotAnswerSure
 					.setText(getString(R.string.hint_submit_sure));
-			// okButton = getString(R.string.ok);
 			txtCommitOk.setText(R.string.tit_submit_dialog);
 		}
 		txtCommitCancle.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
+				txtCommitCancle.setBackgroundColor(getResources().getColor(R.color.head_backcolor));
+				txtCommitOk.setBackgroundColor(getResources().getColor(R.color.tit_prasing_title_backgroud));
 				 dialog.dismiss();
-				// if (mDialogCommit != null) {
-				// mDialogCommit.cancel();
-				// }
 			}
 		});
 		txtCommitOk.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// Intent intent = new Intent();
-				// intent.putExtra("dis", Constants.RECEIVER_SUBMIT_ANSWER);//
-				// 提交答案
-				// intent.putExtra("finished", finished);
-				// intent.putExtra("isBack", isBack);
-				// intent.putExtra("list_not_finished", list_not_finished);
-				// intent.putExtra("type",
-				// AnswerExamPaperService.service.mCurrentTypeId);//
-				// 测试类型：题型。章节。测试
-				// intent.setAction(Constants.RECEIVER_EXAM_PAPER_INFO);//
-				// action与接收器相同
-				// sendBroadcast(intent);
+				txtCommitCancle.setBackgroundColor(getResources().getColor(R.color.tit_prasing_title_backgroud));
+				txtCommitOk.setBackgroundColor(getResources().getColor(R.color.head_backcolor));
 				 dialog.dismiss();
 			}
 		});
-//		builder.setView(view);
-//		dialog.setContentView(R.layout.view_dialog_commit);
-//		dialog.addContentView(view, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 		LinearLayout.LayoutParams lp0 = new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT);
 		view.setLayoutParams( lp0 );
-//		builder.setView(view);
-//		dialog = builder.create();
 		dialog = new Dialog(this);
 		 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		dialog.setContentView(view);
@@ -233,7 +208,15 @@ public class MainActivity extends Activity {
         // 当Window的Attributes改变时系统会调用此函数,可以直接调用以应用上面对窗口参数的更改,也可以用setAttributes
         // dialog.onWindowAttributesChanged(lp);
         dialogWindow.setAttributes(lp);
-		
-		// return dialog;
+        
+//      按屏幕尺寸按比例设置大小
+
+//      WindowManager m = getWindowManager();
+//      Display d = m.getDefaultDisplay(); // 获取屏幕宽、高用
+//      WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
+//      p.height = (int) (d.getHeight() * 0.6); // 高度设置为屏幕的0.6
+//      p.width = (int) (d.getWidth() * 0.65); // 宽度设置为屏幕的0.65
+//      dialogWindow.setAttributes(p);
+
 	}
 }
